@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.parent {
+    position: relative;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+ height: 100vh;
+}
+.bg {
+position: absolute;
+  width: 100%;
+  top: 0px;
+
+  transform: scale(1);
+  left: 0px;
+}
+.car {
+position: absolute;
+ margin-top: 500px;
+ animation-name: caranimation;
+ animation-timing-function: linear;
+ animation-duration: 2s;
+ animation-fill-mode:forwards;
+}
+.bike {
+  position: absolute;
+  margin-top: 500px;
+  right: 50px;
+  animation-name: bikeanimation;
+  animation-duration: 3.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  transform-origin: bottom left;
+  animation-timing-function: linear;
+
+  
+}
+@keyframes bikeanimation {
+    0%{
+        left: -200px;
+    }
+    25%{
+        left: 200px;
+        transform: rotate(-10deg);
+    }
+    50%{
+        left: 700px;
+        transform: rotate(-30deg);
+    }
+    75%{
+        left: 900px;
+        transform: rotate(-10deg);
+    }
+    90%{
+        left: 1200px;
+        transform: rotate(0deg);
+    }
+  
+    100%{
+        left: 1400px;
+    }
+}
+@keyframes caranimation {
+    0%{
+        left: -100px;
+    }
+   
+  
+    100%{
+        left: 1400px;
+    }
+}
